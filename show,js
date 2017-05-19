@@ -10,7 +10,7 @@ const RangePicker = DatePicker.RangePicker;
 function disabledDate(current) {
   // can not select days before today and today
   
-  return {
+  return function(){
   	current && current.valueOf() < Date.now();
   	current.valueOf() > Date.parse("Aug 31, 2017");
   }
